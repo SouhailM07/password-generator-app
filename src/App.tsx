@@ -6,7 +6,7 @@ import { MyContainer } from "./components";
 function App() {
   return (
     <>
-      <div>
+      <div className="h-screen bg-screen">
         <MyContainer />
       </div>
     </>
