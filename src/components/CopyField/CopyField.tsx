@@ -1,8 +1,19 @@
+// hooks
+import { useRef } from "react";
+
 export default function CopyField() {
+  let passwordDiv: any = useRef("");
   return (
-    <div className="flex w-[42rem] bg-componentsColor h-[5rem] items-center justify-between px-[2.4rem]">
-      <div className="text-textColor text-[2rem] font-medium">wpoeiuwapops</div>
-      <button>
+    <div className="flex w-[100%] my-[2rem] bg-componentsColor h-[4.5rem] items-center justify-between px-[2.4rem]">
+      <div ref={passwordDiv} className="text-textColor text-[2rem] font-medium">
+        wpoeiuwapops
+      </div>
+      <button
+        onClick={() => {
+          navigator.clipboard.writeText(passwordDiv.current.textContent);
+          alert("Copied the text: " + passwordDiv.current.textContent);
+        }}
+      >
         <CopyIcon />
       </button>
     </div>
