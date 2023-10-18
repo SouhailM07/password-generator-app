@@ -1,8 +1,20 @@
+// ! redux
+import { useDispatch, useSelector } from "react-redux";
+import { generatePassword } from "../CheckLines/checkLinesSlicer";
 export default function GeneratePassword_section() {
+  let dispatch = useDispatch();
+  let passwordLength = useSelector(
+    (state: any) => state.passwordLength.passwordLength
+  );
   return (
     <>
       <button className="justify-center my-[0.6rem] flex w-[100%] py-[1.2rem] bg-neonGreen text-screen text-[1.2rem] font-medium">
-        <p className="flex justify-between w-[8.5rem]">
+        <p
+          onClick={() => {
+            dispatch(generatePassword(passwordLength));
+          }}
+          className="flex justify-between w-[8.5rem]"
+        >
           <span>GENERATE</span>
           <LeftArrow />
         </p>

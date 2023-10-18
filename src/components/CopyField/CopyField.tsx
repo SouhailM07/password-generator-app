@@ -1,17 +1,25 @@
 // hooks
 import { useRef } from "react";
-
+// !redux
+import { useSelector } from "react-redux";
 export default function CopyField() {
-  let passwordDiv: any = useRef("");
+  let inputPassword: any = useRef("");
+  let password = useSelector((state: any) => state.passwordArray.password);
   return (
     <div className="flex w-[100%] my-[2rem] bg-componentsColor h-[4.5rem] items-center justify-between px-[2.4rem]">
-      <div ref={passwordDiv} className="text-textColor text-[2rem] font-medium">
-        wpoeiuwapops
-      </div>
+      <input
+        type="text"
+        onChange={() => {}}
+        ref={inputPassword}
+        value={password.join("")}
+        placeholder="PLACEHOLDER"
+        className="text-textColor text-[1.7rem] font-bold bg-transparent"
+      />
+
       <button
         onClick={() => {
-          navigator.clipboard.writeText(passwordDiv.current.textContent);
-          alert("Copied the text: " + passwordDiv.current.textContent);
+          navigator.clipboard.writeText(inputPassword.current.value);
+          alert("Copied the text: " + inputPassword.current.value);
         }}
       >
         <CopyIcon />
