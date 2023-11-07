@@ -1,3 +1,6 @@
+// style
+import "./passwordLengthSection.css";
+
 // !redux
 import { useDispatch } from "react-redux";
 import { changeLength } from "./PASSWORD_LENGTH_SECTION_SLICER";

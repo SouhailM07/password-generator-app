@@ -8,20 +8,41 @@ import {PasswordLength_section,CheckLines,PasswordStrength_section,GeneratePassw
 export default function ControlPanel() {
   // 
   let arrOfCheckLines = [
-    "Include Uppercase Letters",
-    "Include Lowercase Letters",
-    "Include Numbers",
-    "Include Symbols",
+    {
+      label: "Include Uppercase Letters",
+      checkedF: addUpperCaseLetters(),
+      noteCheckedF: removeUpperCaseLetters()
+    },
+    {
+      label: "Include Lowercase Letters",
+      checkedF: addLowerCaseLetters(),
+      noteCheckedF: removeLowerCaseLetters()
+    },
+    {
+      label: "Include Numbers",
+      checkedF: addNumbers(),
+      noteCheckedF: removeNumbers()
+    },
+    {
+      label: "Include Symbols",
+      checkedF: addSymbols(),
+      noteCheckedF: removeSymbols()
+    }
   ];
-  let reduxCheckedF=[addUpperCaseLetters(),addLowerCaseLetters(),addNumbers(),addSymbols()]
-  let reduxNotCheckedF=[removeUpperCaseLetters(),removeLowerCaseLetters(),removeNumbers(),removeSymbols()]
+  
   return (
-    <div className="bg-componentsColor  w-[100%] px-[2rem] md:h-[31vw] md:px-[2vw] h-[32rem] flex flex-col justify-evenly">
+    <div className="ControlPanel">
       <PasswordLength_section/>
-      <div className="h-[10rem] md:h-[10vw] flex flex-col justify-between">
+      <div className="ControlPanel-checkLines">
         {arrOfCheckLines.map((e, i) => {
-          return <CheckLines key={i} line={e} Id={`check-${i}`} checkedF={reduxCheckedF[i]} notCheckedF={reduxNotCheckedF[i]}/>;
-        })}
+          return <CheckLines
+          key={i}
+          line={e.label}
+          Id={`check-${i}`}
+          checkedF={e.checkedF}
+          notCheckedF={e.noteCheckedF}
+        />;
+          })}
       </div>
       {/*  */}
       <PasswordStrength_section/>     

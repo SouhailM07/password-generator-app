@@ -1,48 +1,16 @@
-input[type="range"] {
-  -webkit-appearance: none;
-  accent-color: white;
-  cursor: pointer;
-  background-color: var(--screen);
-  transition: 0s;
-  height: 0.8vw;
-  background-image: linear-gradient(var(--neonGreen), var(--neonGreen));
-  background-repeat: no-repeat;
-  border-radius: 0.5vw;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ControlPanel {
+  @apply flex flex-col justify-evenly;
+  @apply md:h-[31vw] md:px-[2vw];
+  @apply w-[100%] px-[2rem] h-[32rem];
+  @apply bg-componentsColor;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-  height: 2vw;
-  width: 2vw;
-  -webkit-appearance: none;
-  border-radius: 50%;
-  background-color: white;
-}
-
-/*  */
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"] + label::before {
-  content: "\2713";
-  display: inline-block;
-  width: 1.5vw;
-  height: 1.5vw;
-  border: 0.2vw solid white;
-  background-color: transparent;
-  margin-right: 1vw;
-  text-align: center;
-  line-height: 1.7vw;
-  color: transparent;
-}
-
-input[type="checkbox"] + label {
-  display: inline-block;
-  cursor: pointer;
-}
-
-input[type="checkbox"]:checked + label::before {
-  background-color: var(--neonGreen);
-  border: 0.2vw solid var(--neonGreen);
-  color: var(--componentColor);
+.ControlPanel-checkLines {
+  @apply flex flex-col justify-between;
+  @apply md:h-[10vw];
+  @apply h-[10rem];
 }
