@@ -10,12 +10,12 @@ export default function CheckLines({ Id, line, checkedF, notCheckedF }) {
   let checkRef: any = useRef("");
   return (
     <>
-      <div className="my-[1rem] text-[1.2rem] font-bold">
+      <div className=" text-[1.2rem] md:text-[1.2vw] font-bold">
         <input
           type="checkbox"
           id={Id}
           ref={checkRef}
-          className="mr-[1.5rem] h-[1.3rem] w-[1.3rem]"
+          // className="mr-[1.5rem] h-[1.3vw] w-[1.3vw] m-[10rem]"
           onChange={() => {
             if (check) {
               dispatch(checkedF);

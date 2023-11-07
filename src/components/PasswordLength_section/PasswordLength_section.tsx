@@ -20,8 +20,12 @@ export default function PasswordLength_section() {
   return (
     <>
       <div className="flex justify-between items-center font-medium">
-        <p className="text-textColor text-[1.2rem]">Character Length</p>
-        <span className="text-neonGreen text-[1.8rem]">{rangeValue}</span>
+        <p className="text-textColor text-[1.2rem] md:text-[1.2vw]">
+          Character Length
+        </p>
+        <span className="text-neonGreen text-[1.8rem] md:text-[1.8vw]">
+          {rangeValue}
+        </span>
       </div>
       <div>
         <input

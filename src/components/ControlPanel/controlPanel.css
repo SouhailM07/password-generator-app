@@ -4,17 +4,17 @@ input[type="range"] {
   cursor: pointer;
   background-color: var(--screen);
   transition: 0s;
-  height: 8px;
+  height: 0.8vw;
   background-image: linear-gradient(var(--neonGreen), var(--neonGreen));
   background-repeat: no-repeat;
-  border-radius: 50px;
+  border-radius: 0.5vw;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  height: 25px;
-  width: 25px;
+  height: 2vw;
+  width: 2vw;
   -webkit-appearance: none;
-  border-radius: 14px;
+  border-radius: 50%;
   background-color: white;
 }
 
@@ -26,13 +26,13 @@ input[type="checkbox"] {
 input[type="checkbox"] + label::before {
   content: "\2713";
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
+  width: 1.5vw;
+  height: 1.5vw;
+  border: 0.2vw solid white;
   background-color: transparent;
-  margin-right: 20px;
+  margin-right: 1vw;
   text-align: center;
-  line-height: 20px;
+  line-height: 1.7vw;
   color: transparent;
 }
 
@@ -43,6 +43,6 @@ input[type="checkbox"] + label {
 
 input[type="checkbox"]:checked + label::before {
   background-color: var(--neonGreen);
-  border: 2px solid var(--neonGreen);
+  border: 0.2vw solid var(--neonGreen);
   color: var(--componentColor);
 }
