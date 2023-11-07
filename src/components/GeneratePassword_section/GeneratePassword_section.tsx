@@ -1,3 +1,6 @@
+// style
+import "./generatePassword_section.css";
+
 // ! redux
 import { useDispatch, useSelector } from "react-redux";
 import { generatePassword } from "../CheckLines/checkLinesSlicer";
@@ -8,13 +11,13 @@ export default function GeneratePassword_section() {
   );
   return (
     <>
-      <button className="justify-center my-[0.6rem] w-[100%] grid place-items-center md:h-[4.3vw] bg-neonGreen text-screen md:text-[1.2vw] text-[1.2rem] font-medium">
-        <p
-          onClick={() => {
-            dispatch(generatePassword(passwordLength));
-          }}
-          className="flex justify-between w-[8.5rem] md:w-[8.5vw] "
-        >
+      <button
+        id="GenerateBtn"
+        onClick={() => {
+          dispatch(generatePassword(passwordLength));
+        }}
+      >
+        <p>
           <span>GENERATE</span>
           <LeftArrow />
         </p>
