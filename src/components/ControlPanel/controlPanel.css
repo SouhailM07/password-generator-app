@@ -4,13 +4,11 @@
 
 .ControlPanel {
   @apply flex flex-col justify-evenly;
-  @apply md:h-[31vw] md:px-[2vw];
   @apply w-[100%] px-[2rem] h-[32rem];
   @apply bg-componentsColor;
 }
 
 .ControlPanel-checkLines {
   @apply flex flex-col justify-between;
-  @apply md:h-[10vw];
   @apply h-[10rem];
 }

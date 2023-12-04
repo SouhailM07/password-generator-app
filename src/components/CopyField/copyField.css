@@ -5,18 +5,15 @@
 @layer components {
   #CopyField {
     @apply flex  items-center justify-between;
-    @apply md:h-[4.5vw];
     @apply w-[100%] h-[4.5rem] px-[2.4rem];
     @apply bg-componentsColor;
   }
   #CopyField input[type="text"] {
     @apply font-bold;
-    @apply md:text-[1.7vw];
     @apply text-[1.7rem];
     @apply text-textColor bg-transparent;
   }
   #CopyField svg {
-    @apply md:w-[2.2vw] md:h-[2.2vw];
     @apply h-[30px] w-[30px];
   }
 }
