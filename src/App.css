@@ -7,9 +7,9 @@ html {
   --screen: #0d0c12;
 }
 
-* {
+/* * {
   transition: 0.3s;
-}
+} */
 
 body {
   font-family: JetBrains Mono;

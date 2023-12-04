@@ -12,6 +12,7 @@ export default function CopyField() {
   return (
     <div id="CopyField">
       <input
+        onChange={() => {}}
         type="text"
         ref={inputPassword}
         value={password.join("")}

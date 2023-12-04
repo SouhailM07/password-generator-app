@@ -23,9 +23,7 @@ export default function PasswordStrength_section() {
       <div id="PasswordStrength">
         <p>STRENGTH</p>
         <div>
-          <p id="strength-type" className="">
-            {strengthType[strength]}
-          </p>
+          <p id="strength-type">{strengthType[strength]}</p>
           <div id="bars-container">
             {bars.map((i) => {
               return <div key={i} className="bars1"></div>;
